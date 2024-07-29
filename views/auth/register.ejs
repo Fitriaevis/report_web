@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>register - PLN UP3 Gresik</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="temp_report_web/assets/favicon.ico" />
+    <!-- Custom Google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="temp_report_web/css/styles.css" rel="stylesheet" />
+    <style>
+        body {
+            background: linear-gradient(to right, #002c77, #088a9b);
+            color: #fff;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .register-container {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            max-width: 1050px;
+            margin: 50px auto;
+        }
+        .register-container h1 {
+            color: #0056a1;
+            margin-bottom: 10px;
+        }
+        .register-form{
+            margin-top: 15px;
+        }
+        .register-container .form-control {
+            border-radius: 0.25rem;
+        }
+        .register-container .btn-primary {
+            background-color: #0056a1;
+            border-color: #0056a1;
+        }
+        .register-container .btn-primary:hover {
+            background-color: #003d6b;
+            border-color: #003d6b;
+        }
+        /* .register-container .register-link {
+            margin-top: 20px;
+        } */
+        .register-container .register-link a {
+            color: #0056a1;
+            text-decoration: none;
+        }
+        .register-container .register-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="register-container text-center">
+            <div class="row mx-auto">
+                <h1 class="display-4 fw-bold">Register</h1>
+                <!-- image profile -->
+                <!-- <div class="col-3">
+                    <img src="/temp_report_web/assets/register-pict.png" class="img-fluid" alt="register-Illustration">
+                </div> -->
+                <!-- register form -->
+                <div class="register-form col">
+                    <form action="/saveusers" method="POST" enctype="multipart/form-data">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text"><i class="bi bi-images"></i></span>
+                                    <div class="form-floating">
+                                        <input type="file" name="file_user" class="form-control" id="floatingInputGroup1" placeholder="" required>
+                                        <label for="floatingInputGroup1" class="text-black">Foto Pribadi</label>
+                                    </div>
+                                </div>
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text"><i class="bi bi-people-fill"></i></span>
+                                    <div class="form-floating">
+                                        <input type="text" name="username" class="form-control" id="floatingInputGroup1" placeholder="" required>
+                                        <label for="floatingInputGroup1" class="text-black">Username</label>
+                                    </div>
+                                </div>
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text"><i class="bi bi-signpost-split"></i></span>
+                                    <div class="form-floating">
+                                        <input type="text" name="alamat" class="form-control" id="floatingInputGroup1" placeholder="" required>
+                                        <label for="floatingInputGroup1" class="text-black">Alamat</label>
+                                    </div>
+                                </div>
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text"><i class="bi bi-telephone-fill"></i></span>
+                                    <div class="form-floating">
+                                        <input type="text" name="telepon" class="form-control" id="floatingInputGroup1" placeholder="" required>
+                                        <label for="floatingInputGroup1" class="text-black">Telepon</label>
+                                    </div>
+                                </div>
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text"><i class="bi bi-gender-neuter"></i></span>
+                                    <div class="form-floating">
+                                        <select class="form-select" id="agama" name="agama" required>
+                                            <option selected>choose one</option>
+                                            <option value="Islam">Islam</option>
+                                            <option value="Kristen">Kristen</option>
+                                            <option value="Katolik">Katolik</option>
+                                            <option value="Hindu">Hindu</option>
+                                            <option value="Budha">Budha</option>
+                                            <option value="Konghucu">Konghucu</option>
+                                        </select>
+                                        <label for="agama" class="form-label text-black">Agama</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text"><i class="bi bi-gender-neuter"></i></span>
+                                    <div class="form-floating">
+                                        <select class="form-select" id="jenis_kelamin" name="jenis_kelamin" required>
+                                            <option selected></option>
+                                            <option value="Pria">Pria</option>
+                                            <option value="Wanita">Wanita</option>
+                                        </select>
+                                        <label for="jenis_kelamin" class="form-label text-black">Jenis Kelamin</label>
+                                    </div>
+                                </div>
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text"><i class="bi bi-window-fullscreen"></i></span>
+                                    <div class="form-floating">
+                                        <input type="text" name="bagian" class="form-control" id="floatingInputGroup1" placeholder="" required>
+                                        <label for="floatingInputGroup1" class="text-black">Bagian</label>
+                                    </div>
+                                </div>
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text"><i class="bi bi-gender-neuter"></i></span>
+                                    <div class="form-floating">
+                                        <select class="form-select" id="role" name="role" required>
+                                            <option selected></option>
+                                            <option value="1">Leader</option>
+                                            <option value="2">Petugas</option>
+                                        </select>
+                                        <label for="role" class="form-label text-black">Role</label>
+                                    </div>
+                                </div>
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text">@</span>
+                                    <div class="form-floating">
+                                        <input type="email" name="email" class="form-control" id="floatingInputGroup1" placeholder="Email" required>
+                                        <label for="floatingInputGroup1" class="text-black">Email</label>
+                                    </div>
+                                </div>
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text"><i class="bi bi-key-fill"></i></span>
+                                    <div class="form-floating">
+                                        <input type="password" name="password" class="form-control" id="floatingInputPassword" placeholder="Password" required>
+                                        <label for="floatingInputPassword" class="text-black">Password</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-outline-primary">Register</button>
+                        <div class="register-link mt-3 text-primary">Do you Have Account ? 
+                            <a href="/register">Sign In</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
